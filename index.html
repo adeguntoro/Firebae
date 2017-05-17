@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap - Prebuilt Layout</title>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <link href="css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="text-center">Realtime Monitoring Sensor Using Firebase</h1>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class=" col-md-12">
+                    <div class="well">
+                        <button onclick="lihat()" type="button" class="btn btn-success">Lihat Datas</button> <button onclick="simpan()" type="button" class="btn btn-success">Simpan Data</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <hr>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCrO3u9ZcydR6EvecSIgtCZP7jCQX_Bdm0",
+                authDomain: "python-296c0.firebaseapp.com",
+                databaseURL: "https://python-296c0.firebaseio.com",
+                projectId: "python-296c0",
+                storageBucket: "python-296c0.appspot.com",
+                messagingSenderId: "219516408243"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="showdata.js"></script>
+    </body>
+</html>

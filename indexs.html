@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bootstrap - Prebuilt Layout</title>
+        <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+        <link href="css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    <h1 class="text-center">Realtime Monitoring Sensor Using Firebase</h1>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <hr>
+            <div class="row">
+                <div class=" col-md-12">
+                    <div class="well">
+                        Percentage : <persenan></persenan>
+                        <hr>
+                        Level : <level></level>
+                        <hr>
+                        Jam : <jam></jam>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="text-center col-md-6 col-md-offset-3">
+                    <h4>Footer </h4>
+                    <p>Copyright &copy; 2017 &middot; You can Download from my Github &middot; <a href="https://github.com/adeguntoro/" > <img src="images/github-512.png" height="200" width="200" class="img-responsive center-block"> </a></p>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <hr>
+        <!--<script src="js/jquery-1.11.2.min.js"></script>
+        <script src="js/bootstrap.js"></script>-->
+        <script type="text/javascript">
+            var c = document.querySelector('jam');
+            
+            var pad = function(x){
+                return x < 10 ? '0' +x : x;
+            }
+            var showclock = function(){
+                var e = new Date();
+                var h = pad(e.getHours());
+                var m = pad(e.getMinutes());
+                var s = pad(e.getSeconds());    
+                c.innerHTML = [h,m,s].join(':');
+            }
+            setInterval(showclock,1000);
+        </script>
+        <script>
+            // Initialize Firebase dari proyek skripsi
+            var config = {
+                apiKey: "AIzaSyAEGZaEPnJkb0Kte4BROjWSm8KpmpVUc18",
+                authDomain: "skripsi1-caef6.firebaseapp.com",
+                databaseURL: "https://skripsi1-caef6.firebaseio.com",
+                projectId: "skripsi1-caef6",
+                storageBucket: "skripsi1-caef6.appspot.com",
+                messagingSenderId: "713207989487"
+            //};
+            //firebase.initializeApp(config);
+            // Initialize Firebase dari proyek Python
+            //var config = {
+            //    apiKey: "AIzaSyCrO3u9ZcydR6EvecSIgtCZP7jCQX_Bdm0",
+            //    authDomain: "python-296c0.firebaseapp.com",
+            //    databaseURL: "https://python-296c0.firebaseio.com",
+            //    projectId: "python-296c0",
+            //    storageBucket: "python-296c0.appspot.com",
+            //    messagingSenderId: "219516408243"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <script src="index.js"></script>
+    </body>
+</html>
